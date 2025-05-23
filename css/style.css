@@ -1,0 +1,32 @@
+/* Custom styles for Jellyfish Warranty Website */
+
+body {
+    font-family: 'Arial', sans-serif; /* This is mainly for testing the link, Bootstrap's font stack is generally preferred */
+}
+
+@media print {
+  .no-print, .no-print * {
+    display: none !important;
+  }
+  body {
+    font-size: 12pt;
+    background-color: #fff; /* Ensure background is white for printing */
+  }
+  .container {
+     max-width: 100% !important;
+     width: 100% !important;
+     padding: 0 !important;
+     margin: 0 !important;
+  }
+  .card {
+    border: 1px solid #dee2e6 !important; /* Ensure card border prints */
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+  a {
+    text-decoration: none; /* Optional: remove underlines from links when printing */
+  }
+  a[href]:after {
+    content: none !important; /* Optional: prevent URL display after links if Bootstrap or browser adds it */
+  }
+}
